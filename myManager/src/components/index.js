@@ -1,4 +1,5 @@
  import React from "react"
+ import { StatusBar } from "react-native"
  import { NavigationContainer } from "@react-navigation/native"
  import { createStackNavigator } from "@react-navigation/stack"
  import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
@@ -26,11 +27,12 @@ const HomeStackScreen = () => {
 export default function Test() {
   return (
    <NavigationContainer>
+    <StatusBar hidden={true} />
      <Tab.Navigator>
        <Tab.Screen 
          name='Home' 
          component={HomeStackScreen} 
-         options={{ title: "Menu"}} />
+         options={{ title: "Menu" }} />
        <Tab.Screen 
          name='RegisterClient' 
          component={RegisterClient} 

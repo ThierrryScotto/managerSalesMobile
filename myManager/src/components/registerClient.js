@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { View, Text, TextInput, Alert, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, Text, TextInput, Alert, TouchableOpacity } from 'react-native'
 import styles from '../styles/styles'
 import axios from 'axios';
 
@@ -19,11 +19,9 @@ export default function RegisterClient() {
       axios.post('http://192.168.0.113:2000/registerUser', { name, number, address })
       .then(function (response) {
         Alert.alert('Sucesso', "Usuário criado com sucesso")
-        console.log(response.success);
       })
       .catch(function (error) {
         Alert.alert('Ops...', 'Houve algum problema')
-        console.log(error);
       });
     }
   }
